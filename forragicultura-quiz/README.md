@@ -1,6 +1,6 @@
 # Simulado V/F — Plantas Forrageiras
 
-Site estático (HTML/CSS/JS puro, sem build) com simulado interativo das 40 questões de Verdadeiro/Falso comentado sobre Plantas Forrageiras (3ª V.A.).
+Site estático (HTML/CSS/JS puro, sem build) com simulado interativo das 58 questões de Verdadeiro/Falso comentado sobre Plantas Forrageiras (3ª V.A.), incluindo questões extras retiradas de provas.
 
 ## Como funciona
 
