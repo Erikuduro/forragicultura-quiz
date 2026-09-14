@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulado V/F — Plantas Forrageiras</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- TELA INICIAL -->
+  <section id="screen-start" class="screen">
+    <div class="card start-card">
+      <h1>🌿 Simulado — Plantas Forrageiras</h1>
+      <p class="subtitle">Banco de questões Verdadeiro/Falso comentado — 3ª V.A.</p>
+
+      <div class="options">
+        <div class="option-group">
+          <label>Módulos</label>
+          <div id="module-checks" class="module-checks"></div>
+        </div>
+
+        <div class="option-group">
+          <label>Ordem das questões</label>
+          <div class="radio-row">
+            <label><input type="radio" name="order" value="sequencial" checked> Sequencial</label>
+            <label><input type="radio" name="order" value="aleatoria"> Aleatória</label>
+          </div>
+        </div>
+      </div>
+
+      <p class="count-info" id="count-info"></p>
+      <button id="btn-start" class="btn btn-primary">Iniciar Simulado</button>
+    </div>
+  </section>
+
+  <!-- TELA DE QUESTÃO -->
+  <section id="screen-quiz" class="screen hidden">
+    <div class="quiz-header">
+      <div class="progress-info">
+        <span id="progress-text">Questão 1 de 40</span>
+        <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+      </div>
+      <div class="score-info">
+        Acertos: <span id="score-text">0</span>
+      </div>
+    </div>
+
+    <div class="card question-card">
+      <span id="question-module" class="module-tag"></span>
+      <p id="question-text" class="question-text"></p>
+
+      <div class="answer-buttons">
+        <button id="btn-verdadeiro" class="btn btn-answer btn-v">✔ Verdadeiro</button>
+        <button id="btn-falso" class="btn btn-answer btn-f">✘ Falso</button>
+      </div>
+
+      <div id="feedback" class="feedback hidden">
+        <div id="feedback-result" class="feedback-result"></div>
+        <p id="feedback-justificativa" class="feedback-justificativa"></p>
+        <button id="btn-next" class="btn btn-primary">Próxima questão →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELA DE RESULTADO -->
+  <section id="screen-result" class="screen hidden">
+    <div class="card result-card">
+      <h1>Resultado do Simulado</h1>
+      <div id="result-score" class="result-score"></div>
+      <p id="result-msg" class="result-msg"></p>
+
+      <div id="result-breakdown" class="result-breakdown"></div>
+
+      <div class="result-actions">
+        <button id="btn-review" class="btn btn-secondary">Revisar respostas erradas</button>
+        <button id="btn-restart" class="btn btn-primary">Fazer novo simulado</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELA DE REVISÃO -->
+  <section id="screen-review" class="screen hidden">
+    <div class="card review-card">
+      <h1>Revisão — Questões Erradas</h1>
+      <div id="review-list" class="review-list"></div>
+      <button id="btn-back-result" class="btn btn-primary">Voltar ao resultado</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
